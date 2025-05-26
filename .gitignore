@@ -1,0 +1,49 @@
+# Java
+*.class
+*.log
+*.jar
+*.war
+*.ear
+*.iml
+
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
+# Build
+/target/
+/out/
+
+# IntelliJ
+.idea/
+*.iws
+*.ipr
+/.idea/
+/*.iml
+/modules.xml
+/.DS_Store
+
+# Kafka logs
+/kafka/logs/
+/zookeeper/logs/
+
+# Keycloak
+/keycloak/data/
+/keycloak/tmp/
+/keycloak/logs/
+
+# Docker
+*.pid
+*.seed
+docker-compose.override.yml
+.env
+*.env
+
+# IDE metadata
+*.swp
+*.swo
