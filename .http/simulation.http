@@ -1,0 +1,119 @@
+### MANUAL — HTTP SYNC
+POST http://localhost:8080/api/simulation/manual/sync
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "strategy": {
+    "type": "BUY_AND_HOLD",
+    "params": { }
+  },
+  "market": {
+    "symbols": ["AMZN"],
+    "bar": "1d"
+  },
+  "engine": {
+    "simulations": 1000,
+    "steps": 252,
+    "seed": 42,
+    "riskFreeRate": 0.01
+  },
+  "portfolio": {
+    "cash": 10000.0,
+    "positions": []
+  }
+}
+
+### MANUAL — HTTP SYNC
+POST http://localhost:8080/api/simulation/manual/sync
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "strategy": {
+    "type": "BUY_AND_HOLD",
+    "params": { }
+  },
+  "market": {
+    "symbols": ["AMZN"],
+    "bar": "1d"
+  },
+  "engine": {
+    "simulations": 1000,
+    "steps": 252,
+    "seed": 42,
+    "riskFreeRate": 0.01
+  },
+  "portfolio": {
+    "cash": 10000.0,
+    "positions": []
+  }
+}
+
+
+
+### MANUAL — EVENT-DRIVEN
+POST http://localhost:8080/api/simulation/manual/event
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "strategy": {
+    "type": "BUY_AND_HOLD",
+    "params": { }
+  },
+  "market": {
+    "symbols": ["MSFT"],
+    "bar": "1d"
+  },
+  "engine": {
+    "simulations": 800,
+    "steps": 252,
+    "seed": 2024,
+    "riskFreeRate": 0.0
+  },
+  "portfolio": {
+    "cash": 5000.0,
+    "positions": []
+  }
+}
+
+
+### PORTFOLIO - HTTP SYNC
+POST http://localhost:8080/api/simulation/portfolio/sync
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "strategy": {
+    "type": "BUY_AND_HOLD",
+    "params": { }
+  },
+  "engine": {
+    "simulations": 1000,
+    "steps": 252,
+    "seed": 42,
+    "riskFreeRate": 0.01
+  }
+}
+
+
+### PORTFOLIO - EVENT-DRIVEN
+POST http://localhost:8080/api/simulation/portfolio/event
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "strategy": {
+    "type": "BUY_AND_HOLD",
+    "params": { }
+  },
+  "engine": {
+    "simulations": 1200,
+    "steps": 252,
+    "seed": 9001
+  }
+}
+
+
+

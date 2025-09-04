@@ -5,6 +5,7 @@
 *.war
 *.ear
 *.iml
+*.cm
 
 # Default ignored files
 /shelf/
@@ -47,3 +48,15 @@ docker-compose.override.yml
 # IDE metadata
 *.swp
 *.swo
+
+# Maven
+**/target/
+**/*.log
+**/logs/
+
+# Wrapper
+mvnw
+mvnw.cmd
+.mvn/
+
+

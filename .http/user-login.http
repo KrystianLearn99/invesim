@@ -1,0 +1,15 @@
+### login user
+POST http://localhost:8080/api/users/me
+Authorization: Bearer {{access_token}}
+Content-Type: application/json
+
+{
+  "preferredCurrency": "PLN",
+  "defaultStrategy": "DCA"
+}
+
+
+### get user details
+GET http://localhost:8080/api/users/me
+Authorization: Bearer {{access_token}}
+

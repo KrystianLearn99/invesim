@@ -1,0 +1,4 @@
+### Get historical prices (via fetcher)
+GET http://localhost:8080/api/market-data/AAPL/history
+Authorization: Bearer {{access_token}}
+Accept: application/json

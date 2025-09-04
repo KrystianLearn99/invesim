@@ -1,0 +1,16 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'microservices'
+    metrics_path: '/actuator/prometheus'
+    static_configs:
+      - targets:
+          - 'host.docker.internal:8081'  # USER-MS
+          - 'host.docker.internal:8082'  # PORTFOLIO-MS
+          - 'host.docker.internal:8083'  # MARKET-DATA-MS
+          - 'host.docker.internal:8084'  # SIMULATION-MS
+          - 'host.docker.internal:8085'  # NOTIFICATION-MS
+        labels:
+          environment: local
+

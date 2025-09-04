@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: USER-MS
+          uri: lb://USER-MS
+          predicates:
+            - Path=/api/users/**
+        - id: PORTFOLIO-MS
+          uri: lb://PORTFOLIO-MS
+          predicates:
+            - Path=/api/portfolio/**
+        - id: MARKET-DATA-MS
+          uri: lb://MARKET-DATA-MS
+          predicates:
+            - Path=/api/market-data/**
+        - id: SIMULATION-MS
+          uri: lb://SIMULATION-MS
+          predicates:
+            - Path=/api/simulation/**
+        - id: NOTIFICATION-MS
+          uri: lb://NOTIFICATION-MS
+          predicates:
+            - Path=/api/notification/**
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.application.name}:${random.value}
+    hostname: api-gateway
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,prometheus
+  endpoint:
+    prometheus:
+      enabled: true
+  metrics:
+    enable:
+      all: true

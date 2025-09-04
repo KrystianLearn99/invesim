@@ -1,0 +1,32 @@
+### Get access token (Keycloak)
+@username = test
+@password = test
+POST http://localhost:9090/realms/invesim/protocol/openid-connect/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&username={{username}}&password={{password}}&client_id=user-ms
+
+
+> {%
+    const token = response.body.access_token;
+    client.global.set("access_token", token);
+%}
+
+
+### Get access token (Keycloak)
+@username1 = adamtest
+@password1 = test
+POST http://localhost:9090/realms/invesim/protocol/openid-connect/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&username={{username1}}&password={{password1}}&client_id=user-ms
+
+
+> {%
+    const token = response.body.access_token;
+    client.global.set("access_token", token);
+%}
+
+
+
+

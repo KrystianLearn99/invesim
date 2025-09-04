@@ -1,0 +1,42 @@
+### Create portfolio
+POST http://localhost:8080/api/portfolio
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "initialCash": 10000.00
+}
+
+### Deposit
+POST http://localhost:8080/api/portfolio/deposit
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{ "amount": 2500.00 }
+
+### Buy
+POST http://localhost:8080/api/portfolio/buy
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "symbol": "AAPL",
+  "quantity": 5.0,
+  "price": 180.25
+}
+
+### Sell
+POST http://localhost:8080/api/portfolio/sell
+Content-Type: application/json
+Authorization: Bearer {{access_token}}
+
+{
+  "symbol": "AAPL",
+  "quantity": 2.0,
+  "price": 190.00
+}
+
+### Valuation
+GET http://localhost:8080/api/portfolio/valuation
+Authorization: Bearer {{access_token}}
+
